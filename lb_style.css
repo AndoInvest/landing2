@@ -1,0 +1,287 @@
+<style>	
+			body, p { 
+				padding: 0; 
+				margin: 0; 
+				font-family: Open Sans;
+			}
+			h1,h2,h3,h4 {
+				font-weight: 900;
+			}
+			.name_logo {
+				position: relative;
+				padding: 16px 35px 0 16px;
+			}
+			.nameofsite {
+				display: flex;
+				align-items: flex-end;
+			}
+			.phone_number {
+				font-size: 24px;
+				line-height: 28px;
+				font-weight: 600;
+				margin: 0;
+			}
+			.contacts {
+				margin-bottom: 10px;
+			}
+			.address {
+				font-size: 16px;
+				line-height: 22px;
+			}
+			.share_buttons {
+				margin-right: 30px;
+			}
+			.share_buttons>img {
+				margin-left: 22px;
+			}
+			.first_line {				
+				display: flex; 
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+			nav {
+				background: #00AFCC;
+				padding: 14px 16px;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 27px;
+				color: #FFFFFF;
+			}
+			.banner {
+				height: 400px; 
+				width: 100%;
+				background: url("bg.png");
+			}		
+			.contacts_section {
+				height: 458px; 
+				width: 100%;
+				background: url("bg.png");
+			}				
+			.row {	margin:0; padding: 0;}
+			.banner_left > img {
+				width: 570px;
+				height: 326px;
+			}
+			section {
+				position: relative;
+			}
+			.name > h2 {
+				margin-top: 33px;
+				margin-bottom: 33px;
+				font-size: 52px;
+				line-height: 71px;
+				text-align: left;
+				color: #FFFFFF;
+			}
+			.button {		
+				background: #FF7D00;				
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 8px;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 33px;
+				text-align: center;
+				color: #FFFFFF;
+				padding: 12px 33px;
+				cursor: pointer;
+			}
+			.slider_dots {
+				background: url("slider_dots.png");
+				left: calc(50% - 88px);
+				bottom: 20px;
+				height: 20px; 
+				width: 88px;
+				position: absolute;
+			}
+			.hello {
+				height: 233px;
+				width: 100%;
+				background: #73E5FF;
+				padding: 35px 16px 43px 16px;
+			}
+			.hello>p {
+				font-size: 20px;
+				line-height: 28px;
+			}
+			.catalog  > h2,.hello > h2 {
+				font-size: 40px;
+				line-height: 54px;
+			}
+			.ruksak {
+				position: absolute;
+				width: 173px;
+				height: 245px;
+				right: 42px;	
+				bottom: 139px;
+				background: url("ruksak.png");				
+			}
+			.catalog {
+				width: 100%;
+				padding: 49px 16px 49px 16px;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			.catalog {
+				width: 100%;
+				height: 850px;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;			
+			}
+			.catalog>div>div>img {
+				margin: 30px 0;
+
+			}
+			a {
+				color: #00636D;
+				font-size: 18px;
+				line-height: 37px;
+				text-decoration-line: underline;
+				width: auto;
+			}
+			h2 {
+				font-size: 36px;
+				line-height: 49px;
+			}
+			.map {
+				background: url("map.png") center no-repeat;
+				height: 493px;
+				width: 100%;
+				position: relative;
+			}
+			.tablo {
+				background: rgba(255, 255, 255, 0.7);
+				position: absolute;
+				width: 449px;
+				height: 465px;
+				left: 16px;
+				top: 15px;
+			}
+			.tablo>* {
+				margin-left: 37px;
+			}
+			td {
+				vertical-align: top;
+				padding: 0 10px 10px 0;
+			}
+			.vk_small{
+				background: url("vk_small.png") center no-repeat;
+				height: 30px;
+				width: 30px;
+				display: inline-block;
+			}
+			.insta_small{
+				background: url("insta_small.png") center no-repeat;
+				height: 30px;
+				width: 30px;
+				display: inline-block;
+			}
+			.line {
+				display: flex;		
+				align-items: center;
+			}
+			.line>div {
+				margin-right: 10px;				
+			}
+			.tablo_text_name {
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 30px;
+				text-align: left;
+			}
+			.tablo_text {
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 30px;
+				text-align: left;
+			}
+			.tablo_title {
+				margin: 22px auto 40px 37px;
+			}
+			.seo {
+				margin: 40px 16px 51px 16px;
+			}
+			.seo>p {	
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 28px;
+				text-align: left;
+			}
+			.seo>h4 {
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 39px;
+				text-align: left;
+				padding: 28px 0 6px 0;
+			}
+			.contact_contact{
+				position:relative;
+				background: #fff;
+				height: calc(100% - 48px);
+				width: calc(100% - 48px);
+				margin: 24px 0 0 24px;
+			}
+			.contacts_section>div>h2 {
+				font-size: 40px;
+				font-weight: 700;
+				line-height: 44px;
+				text-align: left;
+				padding: 40px 16px 0 16px;
+				color: white;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+			input, textarea {
+				padding: 11px 17px 11px 17px;
+				margin: 5px 0;
+			}
+			textarea {
+				height: 128px; 
+			}
+			form>.button {
+				width: 291px;
+				margin: 24px 16px;
+			}
+			footer {
+				background: #E4E4E4;
+				height: 211px;
+				width: 100%;
+			}
+			::placeholder {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 22px;
+				text-align: left;
+			}
+			.contact_contact {
+				font-size: 24px;
+				font-weight: 400;
+				line-height: 38px;
+				text-align: left;
+			}
+			.footer_spisok {
+				margin: 24px 35px 46px 35px; 
+				display: flex;
+				flex-direction: row;
+				
+			}
+			.footer_spisok>li {
+				margin-right: 15px; 
+			}
+			.stroki > img {
+				width: 35px;
+				margin: 9px 29px 9px 64px;
+			}
+			.soc_contacts {
+				margin: 9px 0 0 60px;
+			}
+			.soc_contacts > img {
+				width: 48px;
+			}
+		</style>

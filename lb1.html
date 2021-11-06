@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		<style>	
+			body, p { 
+				padding: 0; 
+				margin: 0; 
+				font-family: Open Sans;
+			}
+			h1,h2,h3,h4 {
+				font-weight: 900;
+			}
+			.name_logo {
+				position: relative;
+				padding: 16px 35px 0 16px;
+			}
+			.nameofsite {
+				display: flex;
+				align-items: flex-end;
+			}
+			.phone_number {
+				font-size: 24px;
+				line-height: 28px;
+				font-weight: 600;
+				margin: 0;
+			}
+			.contacts {
+				margin-bottom: 10px;
+			}
+			.address {
+				font-size: 16px;
+				line-height: 22px;
+			}
+			.share_buttons {
+				margin-right: 30px;
+			}
+			.share_buttons>img {
+				margin-left: 22px;
+			}
+			.first_line {				
+				display: flex; 
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 10px;
+			}
+			nav {
+				background: #00AFCC;
+				padding: 14px 16px;
+				font-weight: bold;
+				font-size: 20px;
+				line-height: 27px;
+				color: #FFFFFF;
+			}
+			.banner {
+				height: 400px; 
+				width: 100%;
+				background: url("bg.png");
+			}		
+			.contacts_section {
+				height: auto; 
+				width: 100%;
+				background: url("bg.png");
+			}				
+			.row {	margin:0; padding: 0;}
+			.banner_left > img {
+				width: 570px;
+				height: auto;
+			}
+			section {
+				position: relative;
+			}
+			.name > h2 {
+				margin-top: 33px;
+				margin-bottom: 33px;
+				font-size: 52px;
+				line-height: 71px;
+				text-align: left;
+				color: #FFFFFF;
+			}
+			.button {		
+				background: #FF7D00;				
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				border-radius: 8px;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 33px;
+				text-align: center;
+				color: #FFFFFF;
+				padding: 12px 33px;
+				cursor: pointer;
+			}
+			.slider_dots {
+				background: url("slider_dots.png");
+				left: calc(50% - 88px);
+				bottom: 20px;
+				height: 20px; 
+				width: 88px;
+				position: absolute;
+			}
+			.hello {
+				height: auto;
+				width: 100%;
+				background: #73E5FF;
+				padding: 35px 16px 43px 16px;
+			}
+			.hello>p {
+				font-size: 20px;
+				line-height: 28px;
+			}
+			.catalog  > h2,.hello > h2 {
+				font-size: 40px;
+				line-height: 54px;
+			}
+			.ruksak {
+				position: absolute;
+				width: 173px;
+				height: 245px;
+				right: 42px;	
+				bottom: 139px;
+				background: url("ruksak.png");				
+			}
+			.catalog {
+				width: 100%;
+				padding: 49px 16px 49px 16px;
+			}
+			ul {
+				list-style-type: none;
+				padding: 0;
+				margin: 0;
+			}
+			.catalog {
+				width: 100%;
+				height: 850px;
+				display: flex;
+				flex-direction: column;
+				flex-wrap: wrap;			
+			}
+			.catalog>div>div>img {
+				margin: 30px 0;
+
+			}
+			a {
+				color: #00636D;
+				font-size: 18px;
+				line-height: 37px;
+				text-decoration-line: underline;
+				width: auto;
+			}
+			h2 {
+				font-size: 36px;
+				line-height: 49px;
+			}
+			.map {
+				height: auto;
+				width: 100%;
+				position: relative;
+			}
+			.map_block {
+				background: url("map.png") center no-repeat;
+				height: 493px;
+				width: 100%;
+				position: relative;
+			}
+			.tablo {
+				background: rgba(255, 255, 255, 0.7);
+				position: absolute;
+				width: 449px;
+				height: 465px;
+				padding-left: 16px;
+				top: 15px;
+			}
+			.tablo>* {
+				margin-left: 37px;
+			}
+			td {
+				vertical-align: top;
+				padding: 0 10px 10px 0;
+			}
+			.vk_small{
+				background: url("vk_small.png") center no-repeat;
+				height: 30px;
+				width: 30px;
+				display: inline-block;
+			}
+			.insta_small{
+				background: url("insta_small.png") center no-repeat;
+				height: 30px;
+				width: 30px;
+				display: inline-block;
+			}
+			.line {
+				display: flex;		
+				align-items: center;
+			}
+			.line>div {
+				margin-right: 10px;				
+			}
+			.tablo_text_name {
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 30px;
+				text-align: left;
+			}
+			.tablo_text {
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 30px;
+				text-align: left;
+			}
+			.tablo_title {
+				margin: 22px auto 40px 37px;
+			}
+			.seo {
+				margin: 40px 16px 51px 16px;
+			}
+			.seo>p {	
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 28px;
+				text-align: left;
+			}
+			.seo>h4 {
+				font-size: 24px;
+				font-weight: 700;
+				line-height: 39px;
+				text-align: left;
+				padding: 28px 0 6px 0;
+			}
+			.contact_contact{
+				position:relative;
+				background: #fff;
+				height: calc(100% - 48px);
+				width: calc(100% - 48px);
+				margin: 24px 0 0 24px;
+			}
+			.contacts_section>div>h2 {
+				font-size: 40px;
+				font-weight: 700;
+				line-height: 44px;
+				text-align: left;
+				padding: 40px 16px 0 16px;
+				color: white;
+			}
+			form {
+				display: flex;
+				flex-direction: column;
+			}
+			input, textarea {
+				padding: 11px 17px 11px 17px;
+				margin: 5px 0;
+			}
+			textarea {
+				height: 128px; 
+			}
+			form>.button {
+				width: 291px;
+				margin: 24px 16px;
+			}
+			footer {
+				background: #E4E4E4;
+				height: auto;
+				width: 100%;
+			}
+			::placeholder {
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 22px;
+				text-align: left;
+			}
+			.contact_contact {
+				font-size: 24px;
+				font-weight: 400;
+				line-height: 38px;
+				text-align: left;
+			}
+			.footer_spisok {
+				padding: 24px 35px 46px 35px; 
+				display: flex;
+				flex-direction: row;
+				
+			}
+			.footer_spisok>li {
+				margin-right: 15px; 
+			}
+			.stroki > img {
+				width: 35px;
+				margin: 9px 29px 9px 64px;
+			}
+			.soc_contacts {
+				margin: 9px 0 0 60px;
+			}
+			.soc_contacts > img {
+				width: 48px;
+			}
+			.contact_contact>h2 {
+				margin: 16px 0 21px 60px
+			}
+			footer>img {
+				margin: 20px 0 20px 35px;
+				max-width: 80%;
+			}
+			@media screen and (max-width: 1400px){
+				.name > h2 {font-size: 44px;}
+			}
+			@media screen and (max-width: 992px){				
+				.catalog {
+					height: 1181px;
+				}
+				.stroki>img {
+					margin-left: 0; 	
+					margin-right: 6px; 					
+				}
+			}			
+			@media screen and (max-width: 767px){		
+				.name > h2 {
+					font-size: 36px;
+					line-height: 38px;
+				}
+				.banner, .catalog {
+					height: auto;
+				}
+				#parvez {
+					width: 93px;
+					height: 110px;
+				}
+				#parvez-2 {
+					height: 98px;
+					width: 87px;
+				}
+				.tablo {
+					position: relative;
+				}
+				.contact_contact>h2 {
+					margin-left: 0; 					
+				}
+				.stroki>span {
+					font-size: 16px;
+				}
+				.footer_spisok {
+					display: none;
+				}
+				.tablo_back {
+					background: #fff;
+				}
+			}
+			@media screen and (max-width: 500px) {
+				tr {
+					display:flex;
+					flex-direction: column;
+					flex-wrap:      wrap;
+				}
+				.tablo>* {
+					margin: 0;
+				}
+				.tablo {
+					max-width: 100%;
+				}
+				.name_logo {
+					width: 200px;
+				}
+				.phone_number {
+					font-size: 16px
+				}
+				.address {
+					font-size: 9px
+				}
+				form>.button {
+					margin: 10px 0;
+				}
+				#t_accs {
+					height: 176px;
+				}
+				#t_cup {
+					height: 109px;
+				}
+				#t-short {
+					height: 135px;
+				}
+				
+			}
+			@media screen and (max-width: 320px) {
+				.name_logo {
+					width: 165px;
+				}
+				.contacts {
+					display: none;
+				}				
+			}		
+		</style>
+		<title>FOX PHOTO</title>
+	</head>
+	<body>
+	<header>
+		<div class="first_line">
+			<div class="nameofsite">
+				<img class="name_logo" src="Group.png" alt="image">
+				<div class="contacts">
+					<p class="phone_number">(342) 247-4-222</p>			
+					<p class="address">Пермь, ул. Пушкина, 66</p>
+				</div>
+			</div>
+			<div class="share_buttons d-none d-md-block">
+				<img src="insta.png" alt="image">
+				<img src="vk.png" alt="image">		
+			</div>
+			<div class="share_buttons d-block d-md-none mx-0">
+				<img class="mx-0 mx-md-1" src="trubka.png" alt="image">
+				<img class="mx-0 mx-md-1" src="menu.png" alt="image">		
+			</div>
+		</div>
+		<nav>
+			<div class="row align-items-start d-none d-md-flex">
+				<div class="col-md-8 col-lg-6 row align-items-start">
+					<div class="col px-1">
+						Виды печати
+					</div>
+					<div class="col px-1">
+						Наши работы
+					</div>
+					<div class="col px-1">
+						Контакты
+					</div>
+				</div>
+				<div class="col-md-4 col-lg-6 px-1">
+				<div class="flex-end;" style="text-align: right;">			
+					<div style=" position: absolute; width: 2px; background: white; height: 100%; top: 0; right: 291px;"></div>
+					<span>Конструктор футболок</span>
+				</div>					
+				</div>
+			</div>			
+		</nav>
+	</header>
+	<main>
+		<section class="row banner justify-content-center">
+			<div class="row col-12 col-md-6 banner_left align-self-center justify-content-center pt-2 pt-sm-3">
+				<img src="left.png">
+			</div>
+			<div class="col-12 col-md-6 justify-content-center">
+				<div class="name">
+					<h2 class="text-left">Печатаем картинки <br> для подарков с душой</h2>
+				</div>
+				<div class="text-center text-md-left mb-5">
+					<span class="button"> Связаться с нами </span>
+				</div>
+				<div class="slider_dots d-none d-md-block">
+				</div>				
+			</div>
+		</section>
+		<section class="hello">
+			<h2>
+				Мы — студия печати Fox Photo
+			</h2>
+			<p class="col-9">
+				Мы FoxPhoto! Студия печати на одежде, посуде и аксессуарах в центре Перми. У нас честные цены на печать и доставка от 100р. А ещё вы можете заказать печать визиток и фото на документы.
+			</p>
+			<div class="ruksak d-none d-lg-block">
+			</div>
+		</section>		
+		<h2 style="margin-left: 16px">На чем мы печатаем</h2>
+		<section class="row catalog flex-nowrap flex-md-wrap">	
+			<div class="justify-content-start col-12 col-md-4 col-lg-3">
+				<div class="align-self-start d-flex flex-row-reverse flex-md-column align-items-sm-center align-items-md-start mb-3 ">
+					<div class="col-6 d-flex justify-content-end justify-content-md-start ">
+						<img src="t-short.png" id="t-short" style=" margin-top: 0; " alt="image">
+					</div>
+					<div class="col-6">
+						<h3>Одежда</h3>
+						<ul>
+							<li>
+								<a href="#">Футболки</a>
+							</li>
+							<li>
+								<a href="#">Свитшоты</a>
+							</li>
+							<li>
+								<a href="#">Толстовки</a>
+							</li>
+							<li>
+								<a href="#">Носки</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+
+			<div class="justify-content-start col-12 col-md-4 col-lg-3">
+				<div class="align-self-start d-flex flex-row-reverse flex-md-column align-items-sm-center align-items-md-start mb-3">
+					<div class="col-6 d-flex justify-content-end justify-content-md-start ">
+						<img src="t_cup.png" id="t_cup" alt="image">
+					</div>
+					<div class="col-6 ">		
+						<h3>Посуда</h3>
+						<ul>
+							<li>
+								<a href="#">Кружки</a>
+							</li>
+							<li>
+								<a href="#">Фляги</a>
+							</li>
+							<li>
+								<a href="#">Тарелки</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>	
+			<div class="justify-content-start col-12 col-md-4 col-lg-3">
+				<div class="align-self-start d-flex flex-row flex-md-column align-items-sm-center align-items-md-start mb-3">
+					<div class="col-6">	
+						<h3>Аксессуары</h3>						
+						<ul>
+							<li>
+								<a href="#">Чехлы</a>
+							</li>
+							<li>
+								<a href="#">Брелки</a>
+							</li>
+							<li>
+								<a href="#">Галстуки</a>
+							</li>
+							<li>
+								<a href="#">Сумки</a>
+							</li>						
+							<li>
+								<a href="#">Рюкзаки</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-6 d-flex justify-content-end justify-content-md-start ">
+						<img src="t_accs.png" id="t_accs" alt="image">
+					</div>
+				</div>	
+			</div>	
+			<div class="justify-content-start col-12 col-md-4 col-lg-3">
+				<div class="align-self-start">
+					<h3>Подарки</h3>
+					<ul>
+						<li>
+							<a href="#">Подарочные наборы</a>
+						</li>
+						<li>
+							<a href="#">Упаковка</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>				
+			<div class="justify-content-start col-12 col-md-4 col-lg-3 order-1 order-md-2 order-lg-1">
+				<div class="align-self-start d-flex flex-row-reverse flex-md-column align-items-sm-center align-items-md-start mb-3">
+					<div class="col-6 d-flex justify-content-end justify-content-md-start ">
+						<img src="t_home.png" style=" margin-top: 0;" id="parvez" alt="image">		
+					</div>
+					<div class="col-6">	
+						<h3>Для дома</h3>
+						<ul>
+							<li>
+								<a href="#">Холсты</a>
+							</li>
+							<li>
+								<a href="#">Модульные картины</a>
+							</li>
+							<li>
+								<a href="#">Подушки</a>
+							</li>
+							<li>
+								<a href="#">Фартуки</a>
+							</li>
+							<li>
+								<a href="#">Магниты</a>
+							</li>
+							<li>
+								<a href="#">Фотокамни</a>
+							</li>
+							<li>
+								<a href="#">Фотокристаллы</a>
+							</li>	
+							<li>
+								<a href="#">Коврики для мыши</a>
+							</li>	
+							<li>
+								<a href="#">Календари</a>
+							</li>	
+							<li>
+								<a href="#">Пазлы</a>
+							</li>	
+							<li>
+								<a href="#">Часы</a>
+							</li>	
+							<li>
+								<a href="#">Новогодние сувениры</a>
+							</li>							
+						</ul>
+					</div>
+				</div>
+			</div>	
+			<div class="justify-content-start col-12 col-md-4 col-lg-3 order-2 order-md-1 order-lg-2 mt-3">
+				<div class="align-self-start d-flex flex-row flex-md-column align-items-sm-center align-items-md-start mb-3">
+					<div class="col-6">	
+						<h3>Фотоуслуги</h3>
+						<ul>
+							<li>
+								<a href="#">Фото на документы</a>
+							</li>
+							<li>
+								<a href="#">Печать фотографий</a>
+							</li>
+							<li>
+								<a href="#">Реставрация фото</a>
+							</li>
+							<li>
+								<a href="#">Фото на памятники</a>
+							</li>			
+							<li>
+								<a href="#">Печать документов</a>
+							</li>							
+						</ul>
+					</div>
+					<div class="col-6 d-flex justify-content-end justify-content-md-start ">
+						<img src="t_photo.png" id="parvez-2" alt="image">
+					</div>
+				</div>
+			</div>				
+		</section>		
+		<section class="map">
+			<div class="map_block">
+			</div>
+			<div class="tablo">
+				<h2 class="tablo_title">Как нас найти</h2>
+				<table>
+				<tr>
+					<td><b class = "tablo_text_name">Адрес </b></td>
+					<td><p class = "tablo_text">г. Пермь, ул. Пушкина, 66 <br>вывеска «Фото, ксерокс» <br>1 этаж</p></td>
+				</tr> 
+				<tr><td><b class = "tablo_text_name">Телефон </b></td><td><p class = "tablo_text">(342) 247-4-222</p></td></tr> 
+				</table>
+				<p><b class = "tablo_text_name">Время работы</b></p>
+				<p class = "tablo_text">будни — с 11.00 до 20.00<br>выходные — с 11.00 до 18.00<p>
+				<div class="line" style="margin-top: 15px;">
+					<div class="vk_small"></div>
+					<a href="https://vk.com/foxphoto59">vk.com/foxphoto59</a>
+				</div>			
+				<div class="line">
+					<div class="insta_small"> </div>
+					<a href="https://instagram.com/foxphotoperm">instagram.com/foxphotoperm</a>
+				</div>
+			</div>		
+		</section>
+		<section class="seo">
+			<p>Фотосалон Fox Photo Пермь предлагает широкий спектр услуг, связанных с фотографией: фото на различные виды документов, реставрация фотографии, печать фотографий на профессиональной фотобумаге, печать фото на холсте, нанесение Ваших изображений на кружки, футболки, магниты, брелоки и т.д.</p>
+			<h4>Оживим интерьер</h4>
+			<p>Если у Вас накопились фотографии с отпусков, праздников или просто запомнившихся дней, мы предлагаем Вам не надеяться на бесперебойную работу компьютера и распечатать любимые фотографии, чтобы в случае поломки компьютерной техники не остаться без приятных сердцу и глазу воспоминаний. Тем более, что распечатать фото через интернет Пермь теперь можно, не выходя из дома или офиса.</p>			
+			<p>Наш фотосалон предлагает Вам весьма востребованную услугу среди наших клиентов – печать фото через интернет Пермь. Для того, чтобы заказать фото через интернет Пермь, нужно отправить Ваши фотографии нам на почту fox-photo@mail.ru, после чего Вам остается лишь дождаться готовности фотографий.</p>
+			<h4>Сделаем одежду уникальной</h4>
+			<p>Мы активно развиваемся и продолжаем радовать наших клиентов качественными и приятными глазу вещицами. Так, например, в холодное время года у нас заказывают теплые толстовки и свитшоты с надписями. Для жарких летних деньков подходят хлопковые футболки и майки с любыми принтами.</p>
+			<h4>Оживим интерьер</h4>
+			<p>Популярная услуга — печать фото на холсте — уже давно полюбилась нашим заказчикам. Холсты очень органично вписываются в интерьер, а разнообразие стилей оформления фотографии будет радовать самый изысканный вкус.</p>
+		</section>
+		<section class="contacts_section row align-content-start">
+			<div class="row col-12 col-md-6">
+				<h2>Оставьте сообщение</h2>
+				<form>
+					<input type="text" placeholder="Ваше имя">
+					<input type="tel" placeholder="Контактный телефон">
+					<textarea placeholder="Сообщение"></textarea>
+					<span class="button"> Отправить </span>
+
+				</form>
+			</div>
+			<div class="row col-12 col-md-6 tablo_back p-2">
+				<div class="contact_contact d-flex flex-column align-items-start mt-0">
+					<h2>Контакты</h2>
+					<div class="stroki"><img src="k_call.png" alt="image"><span> + 7 (342) 2 474 222 </span></div>
+					<div class="stroki"><img src="k_mail.png" alt="image"><span> fox-photo@mail.ru </span></div>
+					<div class="stroki"><img src="k_viber.png" alt="image"><span> +7 (982) 452 50 60</span></div>
+					<div class="stroki"><img src="k_map.png" alt="image"><span> Пермь, ул. Пушкина, 66</span></div>
+					<div class="soc_contacts"style="margin: 9px 0 0 60px">
+						<img style="margin-right: 28px;" src="vk.png" alt="image">
+						<img src="insta.png" alt="image">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<img src="logo_footer.png"  alt="image">
+		<p style="margin: 0 35px;">© FoxPhoto, 2018. Все права защищены</p>
+		<ul class="footer_spisok">
+			<li><a href="#">Виды печати</a></li>
+			<li><a href="#">Наши работы</a></li>
+			<li><a href="#">Цены</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+	</footer>
+	
+	</body>
+</html>
